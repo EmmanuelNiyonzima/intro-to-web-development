@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <title>Learn - Get Started Today</title>
-  <meta name="description" content="Learn is a platform that offers free courses for everyone. Start learning today!" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Albums</title>
+  <meta name="description" content="Create albums and upload images that stay visible after refresh." />
+  <link rel="stylesheet" href="./main.css" />
 </head>
-
 <body>
-  <!-- Navbar section -->
+  <main class="container">
+    <h1>Photo Albums</h1>
 
-  <!-- Hero section -->
+    <section class="panel">
+      <h2>Create Album</h2>
+      <form id="createAlbumForm" class="row">
+        <input id="albumNameInput" type="text" placeholder="Album name" required maxlength="50" />
+        <button type="submit">Create</button>
+      </form>
+    </section>
 
-  <!-- Coding journey section -->
+    <section id="albumsContainer" class="albums"></section>
+  </main>
 
-  <!-- Footer section -->
+  <template id="albumTemplate">
+    <article class="album-card">
+      <header class="album-header">
+        <h3 class="album-title"></h3>
+        <button class="danger delete-album" type="button">Delete album</button>
+      </header>
+
+      <form class="upload-form row">
+        <input class="image-input" type="file" accept="image/*" multiple required />
+        <button type="submit">Upload</button>
+      </form>
+      <p class="status" aria-live="polite"></p>
+
+      <div class="images-grid"></div>
+    </article>
+  </template>
 
   <script src="./script.js"></script>
 </body>
-
 </html>
