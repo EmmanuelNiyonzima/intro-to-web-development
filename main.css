@@ -1,13 +1,37 @@
-/* Removes unwanted styling from the page */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
+* { box-sizing: border-box; }
+body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border: none;
-  max-width: 100%;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fb;
+  color: #162033;
 }
-
-/* Write your code below this */
+.container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+h1 { margin-bottom: 1rem; }
+.panel, .album-card {
+  background: #fff;
+  border: 1px solid #d9e1ef;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.row { display: flex; gap: .5rem; flex-wrap: wrap; }
+input[type="text"], input[type="file"] {
+  flex: 1;
+  border: 1px solid #becae0;
+  border-radius: 8px;
+  padding: .55rem .75rem;
+  background: #fff;
+}
+button {
+  background: #1f6feb;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: .55rem .9rem;
+  cursor: pointer;
+}
+button.danger { background: #c22828; }
+.album-header { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.images-grid { margin-top: .75rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: .75rem; }
+.images-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; border: 1px solid #d6e0f0; }
+.status { min-height: 1.2rem; margin-top: .5rem; color: #42516f; font-size: .9rem; }
